@@ -34,7 +34,7 @@
 <style>
   #mymap {
   width: 100%;
-  height: 200px;
+  height: 100%;
   margin-top: 100px;
 }
       @media (min-width: 767px) {
@@ -150,7 +150,7 @@ google.maps.event.addDomListener(window, 'resize', function() {
               lng: position.coords.longitude
             };
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Thebest sity!');
+            infoWindow.setContent('The best sity!');
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
