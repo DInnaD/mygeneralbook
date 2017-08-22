@@ -31,12 +31,12 @@
 </head>
 <body>
 <div id="mymap"></div>
-    <div id="contactform">
-        <div class="brand">MY MANAGER</div>
+    <div id="contactform1">
+        <div class="brand" style="position:absolute;">MY MANAGER</div>
     <!--div class="address-bar">3481 Melrose Place | Beverly Hills, CA 90210 | 123.456.7890</div-->
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default" role="navigation" style="position:absolute;">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -51,37 +51,14 @@
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav" >
                     <li>
                         <a href="index_main.html">Home</a>
                     </li>
                     <li>
                         <a href="index.html">Dressing</a>
                     </li>
-                    <li>
-                        <a href="index_eating.html">Eating</a>
-                    </li>
-                    <li>
-                        <a href="index_traveling.html">Traveling</a>
-                    </li>
-                    <li>
-                        <a href="index_shoping.html">Shoping</a>
-                    </li>
-                    <li>
-                        <a href="index_contacting.html">Contacting</a>
-                    </li>
-                    <li>
-                        <a href="index_learning.html">Learning</a>
-                    </li>
-                    <li>
-                        <a href="index_working.html">Working</a>
-                    </li>
-                    <li>
-                        <a href="index_helping.html">Helping</a>
-                    </li>
-                    <li>
-                        <a href="index_mixing.html">Mixing</a>
-                    </li>
+                    
                     <li>
                         <a href="contact.html">Contact</a>
                     </li>
@@ -92,7 +69,7 @@
         <!-- /.container -->
     </nav>
 
-        
+        <div id="contactform">
         </div>
              
 <style>
@@ -235,7 +212,7 @@ google.maps.event.addDomListener(window, 'resize', function() {
               lng: position.coords.longitude
             };
             infoWindow.setPosition(pos);
-            infoWindow.setContent('The best sity!');
+            //infoWindow.setContent('The best sity!');
             map.setCenter(pos);
           }, function() {
             handleLocationError(true, infoWindow, map.getCenter());
