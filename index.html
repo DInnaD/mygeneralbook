@@ -34,7 +34,7 @@
     <div id="contactform">
         <div class="brand" style="font-size: 45px!important;">my General Book</div>
         <hr>
-        <form role="form" style="font-size: 12px !important;  margin-top: 10px !important; align-text: center;">
+        <form role="form" style="font-size: 12px !important;  margin-top: 10px !important; align-text: center !important;">
          <div class="row">
              
 
@@ -465,7 +465,7 @@ google.maps.event.addDomListener(window, 'resize', function() {
             }
           ]
         });
-        var infoWindow = new google.maps.InfoWindow({map: map});
+       var infoWindow = new google.maps.InfoWindow({map: map});
         // Try HTML5 geolocation.
         if (navigator.geolocation) {
           navigator.geolocation.getCurrentPosition(function(position) {
@@ -474,14 +474,14 @@ google.maps.event.addDomListener(window, 'resize', function() {
               lng: position.coords.longitude
             };
             infoWindow.setPosition(pos);
-            //infoWindow.setContent('The best sity!');
+            infoWindow.setContent('Thebest sity!');
             map.setCenter(pos);
           }, function() {
-            handleLocationError(true,/* infoWindow,*/ map.getCenter());
+            handleLocationError(true, infoWindow, map.getCenter());
           });
         } else {
           // Browser doesn't support Geolocation
-          handleLocationError(false,/* infoWindow,*/ map.getCenter());
+          handleLocationError(false, infoWindow, map.getCenter());
         }
       }
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
