@@ -32,10 +32,48 @@
 <body>
 <div id="mymap"></div>
   <div id="contactform">
-        <div class="brand" style="font-size: 45px!important;">my General Book
-        </div>
-        <hr>
-  id="contactform"    <div id="navigation">
+        <style> 
+input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 0;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 19px 10px 2px 50px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=text]:focus {
+    width: 100%;
+}
+</style>
+
+
+
+
+<form id="search" action="#">
+  
+	<span><input id="search" type="text" name="search" placeholder="Search.."></span> 
+		<span> <button onclick="talk()" style="background: none; border:none; padding-top: 3px;"><i class="fa fa-microphone" aria-hidden="true" ></i></button></span>
+ 
+		<span><button onclick="stop()" style="background: none; border:none; padding-top: 3px;"><i class="fa fa-microphone-slash" aria-hidden="true" ></i></button></span>
+<!--span><input type="submit" value="Submit"  /></span-->
+	  </form>
+<hr>
+        
+	<!--div id="navigation">
+   	 <ul class="nav-list">
+<li id="js-show-instruction" class="btn btn-circle" ><i class="fa fa-info-circle" aria-hidden="true"></i></li-->
+   <div class="brand"><a href="#" id="toggler" title="Click what to do" style="color: #42DCA3;">
+	   <i class="fa fa-info-circle" aria-hidden="true" style="35px !important;"></i></a>General Book</div><!--"brand"-->		
+		
+                <div id="box" style="display: none; text-align: center; position: relative;"></div>
+			
+			<div id="navigation">
     <ul class="nav-list">
         <li id="js-show-all">Show all Contacts</li>
         <li id="js-search">Search</li>
