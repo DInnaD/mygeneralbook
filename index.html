@@ -86,12 +86,32 @@ input[type=text]:focus {
 	  
 	  
 	<script>
+		
   window.onload= function() {
+	document.getElementById('toggler1').onclick = function() {
+         openbox('box1', this);
+         return false;
+     };
+  };	  
      document.getElementById('toggler').onclick = function() {
          openbox('box', this);
          return false;
      };
   };
+
+
+  function openbox(id, toggler1) {
+     var div = document.getElementById(id);
+     if(div.style.display == 'block') {
+         div.style.display = 'none';
+         toggler1.innerHTML = '<i class="fa fa-info-circle" aria-hidden="true" style="font-size: 54px;"></i>';
+     }
+     else {
+         div.style.display = 'block';
+         toggler1.innerHTML = '<i class="fa fa-ban" aria-hidden="true"></i>';
+     }	
+  }
+		
   function openbox(id, toggler) {
      var div = document.getElementById(id);
      if(div.style.display == 'block') {
@@ -104,21 +124,7 @@ input[type=text]:focus {
      }
 	  
 	  
-document.getElementById('toggler1').onclick = function() {
-         openbox('box1', this);
-         return false;
-     };
-  };
-  function openbox(id, toggler1) {
-     var div = document.getElementById(id);
-     if(div.style.display == 'block') {
-         div.style.display = 'none';
-         toggler1.innerHTML = '<i class="fa fa-info-circle" aria-hidden="true" style="font-size: 54px;"></i>';
-     }
-     else {
-         div.style.display = 'block';
-         toggler1.innerHTML = '<i class="fa fa-ban" aria-hidden="true"></i>';
-     }	  
+  
   }
   </script> 
 	  
